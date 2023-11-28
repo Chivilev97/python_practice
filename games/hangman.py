@@ -44,22 +44,22 @@ WORDS = ('НОУТБУК', 'КОРОВА', 'КОРАБЛЬ', 'АЙФОН')
 word = random.choice(WORDS)
 so_far = '-' * len(word)
 wrong = 0
-used = []
+used_letters = []
 
 print('Добро пожаловать в игру "Виселица"')
 
 while wrong < MAX_WRONG and so_far != word:
     print(HANGMAN[wrong])
-    print('\nВы уже предлагали следующие буквы:\n', used)
+    print('\nВы уже предлагали следующие буквы:\n', used_letters)
     print('\nОтгаданное вами слово сейчас выглядит так:\n', so_far)
     guess = input('\n\nВведите букву: ')
     guess = guess.upper()
 
-    while guess in used:
+    while guess in used_letters:
         print('Вы уже предлагали букву:', guess)
         guess = input('\n\nВведите букву: ')
         guess = guess.upper()
-    used.append(guess)
+    used_letters.append(guess)
 
     if guess in word:
         print('Да! Буква', guess, 'есть в слове!')
