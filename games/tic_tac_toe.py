@@ -32,18 +32,15 @@ def ask_number(question, low, high):
     return response
 
 
-def pieces():
+def init_players():
     '''Определяет первый ход'''
     go_first = ask_yes_no('Хочешь оставить за собой первый ход? (y/n): ')
     if go_first == 'y':
         print('Даю тебе фору: играй крестиками.')
-        human = X
-        computer = O
+        return O, X
     else:
         print('Буду начинать я.')
-        human = O
-        computer = X
-    return computer, human
+        return X, O
 
 
 def new_board():
@@ -147,7 +144,7 @@ def congrat_winner(the_winner, computer, human):
 
 def main():
     display_instruct()
-    computer, human = pieces()
+    computer, human = init_players()
     turn = X
     board = new_board()
     display_board(board)
