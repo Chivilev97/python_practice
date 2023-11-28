@@ -1,0 +1,18 @@
+{
+    "vsq": {
+        "original_url": "https://example.com",
+        "request_count": 2
+    },
+    "mjy": {
+        "original_url": "https://mirabreakingbad.com/episodes/br-3-season-12-seriya/",
+        "request_count": 3
+    },
+    "zpi": {
+        "original_url": "https://practicum.yandex.ru/trainer/git-basics/lesson/0c3fb041-ddbf-49ae-8c30-c3389595be23/",
+        "request_count": 1
+    },
+    "qle": {
+        "original_url": "https://postgrespro.ru/docs/postgresql/16/queries-table-expressions",
+        "request_count": 0
+    }
+}
